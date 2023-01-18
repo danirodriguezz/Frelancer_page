@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programador Frelancer</title>
+    <link rel="stylesheet" href="css/normilize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Overpass+Mono&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Daniel Rodríguez Frelancer</h1>
+        <h1 class="titulo">Daniel Rodríguez <span>Frelancer</span></h1>
     </header>
     
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre mi</a>
-        <a href="#">Clientes</a>
-        <a href="#">Contactos</a>
-    </nav>
-
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre mi</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
 
     <section>
-        <h2>Diseño y Desarrollo Web Frelancer</h2>
+        <h2 class="titulo">Diseño y Desarrollo Web Frelancer</h2>
 
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" 
             width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" 
@@ -98,6 +105,39 @@
     
     <section>
         <h2>Contacto</h2>
+
+        <form>
+            <fieldset>
+                <legend>Contacta rellenando todos los campos</legend>
+
+                <div>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Tu Nombre">
+                </div>
+                
+                <div>
+                    <label>Teléfono</label>
+                    <input type="tel" placeholder="Tu Teléfono">
+                </div>
+                
+
+                <div>
+                    <label>Correo</label>
+                    <input type="email" placeholder="Tu email">
+                </div>
+                
+                <div>
+                    <label>Mensaje</label>
+                    <textarea></textarea>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+               
+            </fieldset>
+        </form>
+
     </section>
     
     <footer>
