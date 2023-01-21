@@ -44,11 +44,23 @@ body {
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
 @media (min-width: 768px) {
     .butoon {
         width: auto;
     }   
+}
+.butoon:hover {
+    cursor: pointer;
+}
+.w-sm-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
 }
 /* Fuente */
 h1 {
@@ -124,10 +136,27 @@ h1, h2, h3 {
 .contenido-hero h2, .contenido-hero p {
     color: var(--blanco);
 }
-.content {
+
+/* Codigo que separa los servicios con flex */
+/* .content {
     display: flex;
-    
+    flex-direction: column;
 }
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+    }
+}*/
+
+/* Codigo que separa los servicios con  */
+@media (min-width: 768px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
 .service {
     display: flex;
     flex-direction: column;
@@ -147,6 +176,53 @@ h1, h2, h3 {
     background-color: var(--primario);
     border-radius: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+}
+.form {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /*Utiliza el valor mas pequeño */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+.form fieldset {
+    border: none;
+}
+.form legend {
+    text-align: center;
+    color: var(--primario);
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* .contenedor-campos {
+
+}
+.campo{
+
+} */
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+}
+.send .butoon{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .send .butoon{
+        width: auto;
+    }
 }
